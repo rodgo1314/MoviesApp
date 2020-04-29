@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		50A9AF792453E10700454AC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A9AF782453E10700454AC9 /* Assets.xcassets */; };
 		50A9AF7C2453E10700454AC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50A9AF7B2453E10700454AC9 /* Preview Assets.xcassets */; };
 		50A9AF7F2453E10700454AC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50A9AF7D2453E10700454AC9 /* LaunchScreen.storyboard */; };
+		50A9AF882453F3E100454AC9 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A9AF872453F3E100454AC9 /* MovieData.swift */; };
+		50A9AF8B24552CF100454AC9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 50A9AF8A24552CF100454AC9 /* SDWebImageSwiftUI */; };
+		50A9AF912455ACAC00454AC9 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 50A9AF902455ACAC00454AC9 /* QGrid */; };
+		50DB89552455BA3C00FD20E1 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = 50DB89542455BA3C00FD20E1 /* Grid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,7 @@
 		50A9AF7B2453E10700454AC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50A9AF7E2453E10700454AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50A9AF802453E10700454AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50A9AF872453F3E100454AC9 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A9AF912455ACAC00454AC9 /* QGrid in Frameworks */,
+				50DB89552455BA3C00FD20E1 /* Grid in Frameworks */,
+				50A9AF8B24552CF100454AC9 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				50A9AF712453E10400454AC9 /* Movies */,
 				50A9AF702453E10400454AC9 /* Products */,
+				50DB89532455BA3C00FD20E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +65,7 @@
 		50A9AF712453E10400454AC9 /* Movies */ = {
 			isa = PBXGroup;
 			children = (
+				50A9AF862453F3CA00454AC9 /* Models */,
 				50A9AF722453E10400454AC9 /* AppDelegate.swift */,
 				50A9AF742453E10400454AC9 /* SceneDelegate.swift */,
 				50A9AF762453E10400454AC9 /* ContentView.swift */,
@@ -75,6 +85,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		50A9AF862453F3CA00454AC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				50A9AF872453F3E100454AC9 /* MovieData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50DB89532455BA3C00FD20E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +116,11 @@
 			dependencies = (
 			);
 			name = Movies;
+			packageProductDependencies = (
+				50A9AF8A24552CF100454AC9 /* SDWebImageSwiftUI */,
+				50A9AF902455ACAC00454AC9 /* QGrid */,
+				50DB89542455BA3C00FD20E1 /* Grid */,
+			);
 			productName = Movies;
 			productReference = 50A9AF6F2453E10400454AC9 /* Movies.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +149,11 @@
 				Base,
 			);
 			mainGroup = 50A9AF662453E10400454AC9;
+			packageReferences = (
+				50A9AF8924552CF100454AC9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				50A9AF8C24552D2A00454AC9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
+				50A9AF8F2455ACAC00454AC9 /* XCRemoteSwiftPackageReference "QGrid" */,
+			);
 			productRefGroup = 50A9AF702453E10400454AC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A9AF882453F3E100454AC9 /* MovieData.swift in Sources */,
 				50A9AF732453E10400454AC9 /* AppDelegate.swift in Sources */,
 				50A9AF752453E10400454AC9 /* SceneDelegate.swift in Sources */,
 				50A9AF772453E10400454AC9 /* ContentView.swift in Sources */,
@@ -342,6 +378,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		50A9AF8924552CF100454AC9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.3;
+			};
+		};
+		50A9AF8C24552D2A00454AC9 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-grid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+		50A9AF8F2455ACAC00454AC9 /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		50A9AF8A24552CF100454AC9 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50A9AF8924552CF100454AC9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		50A9AF902455ACAC00454AC9 /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50A9AF8F2455ACAC00454AC9 /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
+		50DB89542455BA3C00FD20E1 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 50A9AF8C24552D2A00454AC9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
+			productName = Grid;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50A9AF672453E10400454AC9 /* Project object */;
 }
