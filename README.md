@@ -2,7 +2,7 @@
 App uses Movies Database Api to show popular movies using Swift UI iOS 13.
 Also implemented infinite scroll
 
-Time spent: **10** hours spent in total
+Time spent: **6** hours spent in total
 
 ## User Stories
 
