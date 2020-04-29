@@ -9,7 +9,7 @@ Time spent: **6** hours spent in total
 The following **required** functionality is completed:
 
 - [x] User can scroll infinitely through the movies 
-- [x] User can click on move to open sheet about movie overview 
+- [x] User can click on movies to open sheet about movie overview 
 - [x] User can see the rating of the movie using stars  
 
 
